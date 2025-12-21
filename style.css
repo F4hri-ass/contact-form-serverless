@@ -17,7 +17,7 @@ body {
       rgba(71, 65, 161, 0.85),  /* indigo */
       rgba(76, 29, 149, 0.85)   /* purple */
     ),
-    url("assets/bg1.jpeg");
+    url("Assets/bg1.jpeg");
 
   background-size: 300% 300%, cover;
   background-position: center, center;
