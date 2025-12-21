@@ -11,9 +11,9 @@ body {
   margin: 0;
   background: linear-gradient(
     120deg,
-    #6366f1,
-    #06b6d4,
-    #8b5cf6
+  #051e64,   /* deep blue */
+  #4741a1,   /* dark teal */
+  #4c1d95 
   );
   background-size: 300% 300%;
   animation: gradientMove 12s ease infinite;
@@ -173,4 +173,45 @@ button:hover::before {
   color: #ffffff;
   text-align: center;
   text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE - MOBILE */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  form {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  input,
+  textarea {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+/* EXTRA SMALL DEVICE */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  form {
+    padding: 20px;
+  }
 }
