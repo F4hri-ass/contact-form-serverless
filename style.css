@@ -1,0 +1,176 @@
+/* RESET + FONT */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+/* BACKGROUND GRADIENT ANIMATION */
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+    120deg,
+    #6366f1,
+    #06b6d4,
+    #8b5cf6
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* TITLE */
+h2 {
+  color: #ffffff;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 0.8px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* FORM CARD */
+form {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.2),
+    inset 0 0 0 1px rgba(255,255,255,0.2);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* FLOAT EFFECT */
+form:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+/* INPUT & TEXTAREA */
+input,
+textarea {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+
+  background: rgba(255,255,255,0.85);
+  color: #1f2937;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+/* HOVER EFFECT */
+input:hover,
+textarea:hover {
+  transform: scale(1.02);
+}
+
+/* FOCUS GLOW */
+input:focus,
+textarea:focus {
+  outline: none;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 3px rgba(99,102,241,0.35),
+    0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* TEXTAREA HEIGHT */
+textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+/* BUTTON */
+button {
+  position: relative;
+  overflow: hidden;
+
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* BUTTON HOVER */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+}
+
+/* BUTTON CLICK */
+button:active {
+  transform: scale(0.97);
+}
+
+/* SHINE EFFECT */
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+/* STATUS TEXT */
+#status {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
